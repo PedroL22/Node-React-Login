@@ -1,5 +1,6 @@
 import Fastify, { fastify, FastifyReply, FastifyRequest } from "fastify";
 import fjwt from "@fastify/jwt";
+import cors from "@fastify/cors";
 import dotenv from "dotenv";
 import userRoutes from "./modules/user/user.route";
 import { userSchemas } from "./modules/user/user.schema";
@@ -16,6 +17,10 @@ dotenv.config();
 
 server.register(fjwt, {
   secret: process.env.SECRET as string,
+});
+
+server.register(cors, {
+  origin: true,
 });
 
 server.decorate(
