@@ -42,7 +42,7 @@ export default function Login() {
       dispatch(
         setLogin({
           user: loggedIn.user,
-          token: loggedIn.token,
+          token: loggedIn.accessToken,
         })
       );
     }

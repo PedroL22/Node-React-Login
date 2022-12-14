@@ -44,7 +44,9 @@ export async function loginHandler(
   if (correctPassword) {
     const { password, salt, ...rest } = user;
 
-    return { accessToken: server.jwt.sign(rest) };
+    const username = await findUserByUsername(body.username);
+
+    return { accessToken: server.jwt.sign(rest), user: username?.username };
   }
 
   return reply.code(401).send("Invalid username or password.");
