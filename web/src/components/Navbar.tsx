@@ -42,7 +42,9 @@ export default function Navbar() {
           className="flex-none cursor-pointer"
           onClick={() => navigate("/login")}
         >
-          <p className="font-semibold text-lg mr-1">Login</p>
+          <p className="font-semibold text-lg mr-1 btn btn-ghost normal-case">
+            Login
+          </p>
         </div>
       )}
     </div>
