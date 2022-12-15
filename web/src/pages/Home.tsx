@@ -3,9 +3,8 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gray-200 h-screen">
       <Navbar />
-      <h1>ola</h1>
     </div>
   );
 }

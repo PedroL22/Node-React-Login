@@ -11,16 +11,18 @@ export default function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Node Social Network</a>
+        <a
+          className="btn btn-ghost normal-case text-xl"
+          onClick={() => navigate("/")}
+        >
+          Node Social Network
+        </a>
       </div>
       {user ? (
         <div className="flex-none">
-          <p className="font-semibold text-lg mr-1">{user}</p>
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="https://placeimg.com/80/80/people" />
-              </div>
+            <label tabIndex={0} className="btn btn-ghost normal-case">
+              <p className="font-semibold text-lg mr-1">{user}</p>
             </label>
             <ul
               tabIndex={0}
