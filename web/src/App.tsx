@@ -6,15 +6,12 @@ import Profile from "./pages/Profile";
 import { useSelector } from "react-redux";
 
 function App() {
-  const isAuth = Boolean(useSelector((state: any) => state.token));
+  // const isAuth = Boolean(useSelector((state: any) => state.token));
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={isAuth ? <Home /> : <Navigate to="/login" />}
-        />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile/:userId" element={<Profile />} />
