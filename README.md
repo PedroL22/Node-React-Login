@@ -1,2 +1,2 @@
-# Node Social Network
-A social network made with Fastify, React, Redux, Tailwind CSS, DaisyUI, and Prisma.
+# Node React Login
+A login/register system made with Fastify, React, Redux, Tailwind CSS, DaisyUI, and Prisma. 
